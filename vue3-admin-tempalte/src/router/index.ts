@@ -6,23 +6,23 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: Home
   },
   {
     path: '/vuex',
     name: 'Vuex',
-    component: Vuex,
+    component: Vuex
   },
   {
     path: '/axios',
     name: 'Axios',
-    component: () => import('@/views/axios.vue'), // 懒加载组件
-  },
+    component: () => import('@/views/axios.vue') // 懒加载组件
+  }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 })
 
 export default router
