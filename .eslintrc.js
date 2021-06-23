@@ -8,8 +8,21 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: ['vue', '@typescript-eslint'],
-  rules: {}
+  rules: {
+    'import/no-extraneous-dependencies': 'off',
+    // 'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-console': 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'space-before-function-paren': 'off',
+    'vue/no-unused-components': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'import/no-absolute-path': 'off'
+  }
 }
